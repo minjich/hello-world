@@ -1,0 +1,79 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "HUB_Sales.csv",
+				"folderPath": "comp",
+				"fileSystem": "root"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\r",
+			"escapeChar": "",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": [
+			{
+				"name": "HK_Sales",
+				"type": "String"
+			},
+			{
+				"name": "Version",
+				"type": "String"
+			},
+			{
+				"name": "Currency_Type",
+				"type": "String"
+			},
+			{
+				"name": "Record_Type",
+				"type": "String"
+			},
+			{
+				"name": "Plan_version_CO_PA",
+				"type": "String"
+			},
+			{
+				"name": "Period_Year",
+				"type": "String"
+			},
+			{
+				"name": "Profitability_Segment_Number_CO_PA",
+				"type": "String"
+			},
+			{
+				"name": "Profitability_Segment_Changes_CO_PA",
+				"type": "String"
+			},
+			{
+				"name": "Profitability_Analysis_Chit_Number",
+				"type": "String"
+			},
+			{
+				"name": "CO_PA_Item_Number",
+				"type": "String"
+			},
+			{
+				"name": "BK_Sales",
+				"type": "String"
+			},
+			{
+				"name": "EDW_LOAD_DTS",
+				"type": "String"
+			},
+			{
+				"name": "RECORD_SRC",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

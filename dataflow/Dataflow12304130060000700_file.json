@@ -1,0 +1,90 @@
+{
+	"name": "Dataflow12304130060000700_file",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "CosmosDbNoSql1",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Parquet1_cosmos",
+						"type": "DatasetReference"
+					},
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
+			"transformations": [
+				{
+					"name": "MapDrifted1",
+					"description": "Creates an explicit mapping for each drifted column"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {_rid} as string,",
+				"          {_ts} as long,",
+				"          id as string,",
+				"          orderdate as string,",
+				"          customerid as long,",
+				"          customerdetails as (customername as string, customeremail as string),",
+				"          product as string,",
+				"          quantity as long,",
+				"          price as double,",
+				"          {_etag} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     container: 'abc',",
+				"     storeType: 'olap',",
+				"     format: 'document',",
+				"     enableChangeFeed: true,",
+				"     changeFeedStartFromTheBeginning: true,",
+				"     captureIntermediateUpdate: false,",
+				"     captureUserDeletes: true,",
+				"     captureTxnTTLDeletes: true,",
+				"     store: 'cosmosDB') ~> source1",
+				"source1 derive({_rid} = toString(byName('_rid')),",
+				"          {_ts} = toLong(byName('_ts')),",
+				"          id = toString(byName('id')),",
+				"          orderdate = toString(byName('orderdate')),",
+				"          customerid = toLong(byName('customerid')),",
+				"          product = toString(byName('product')),",
+				"          quantity = toLong(byName('quantity')),",
+				"          price = toDouble(byName('price')),",
+				"          {_etag} = toString(byName('_etag'))) ~> MapDrifted1",
+				"MapDrifted1 sink(allowSchemaDrift: true,",
+				"     validateSchema: true,",
+				"     format: 'parquet',",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          {_rid},",
+				"          {_ts},",
+				"          id,",
+				"          orderdate,",
+				"          customerid,",
+				"          customerdetails,",
+				"          product,",
+				"          quantity,",
+				"          price,",
+				"          {_etag}",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

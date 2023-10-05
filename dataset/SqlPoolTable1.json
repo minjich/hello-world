@@ -1,0 +1,112 @@
+{
+	"name": "SqlPoolTable1",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "VendorID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "tpep_pickup_datetime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "tpep_dropoff_datetime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "passenger_count",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "trip_distance",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "RatecodeID",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "store_and_fwd_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PULocationID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DOLocationID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "payment_type",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "fare_amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "extra",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "mta_tax",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "tip_amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "tolls_amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "improvement_surcharge",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "total_amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "congestion_surcharge",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "airport_fee",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "yellowtaxi"
+		},
+		"sqlPool": {
+			"referenceName": "minjisource",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

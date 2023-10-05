@@ -1,0 +1,882 @@
+{
+	"name": "DelimitedText3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Sample_data_CE1KR01.csv",
+				"folderPath": "comp",
+				"fileSystem": "root"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\"",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PALEDGER",
+				"type": "String"
+			},
+			{
+				"name": "VRGAR",
+				"type": "String"
+			},
+			{
+				"name": "VERSI",
+				"type": "String"
+			},
+			{
+				"name": "PERIO",
+				"type": "String"
+			},
+			{
+				"name": "PAOBJNR",
+				"type": "String"
+			},
+			{
+				"name": "PASUBNR",
+				"type": "String"
+			},
+			{
+				"name": "BELNR",
+				"type": "String"
+			},
+			{
+				"name": "POSNR",
+				"type": "String"
+			},
+			{
+				"name": "HZDAT",
+				"type": "String"
+			},
+			{
+				"name": "USNAM",
+				"type": "String"
+			},
+			{
+				"name": "GJAHR",
+				"type": "String"
+			},
+			{
+				"name": "PERDE",
+				"type": "String"
+			},
+			{
+				"name": "WADAT",
+				"type": "String"
+			},
+			{
+				"name": "FADAT",
+				"type": "String"
+			},
+			{
+				"name": "BUDAT",
+				"type": "String"
+			},
+			{
+				"name": "ALTPERIO",
+				"type": "String"
+			},
+			{
+				"name": "PAPAOBJNR",
+				"type": "String"
+			},
+			{
+				"name": "PAPASUBNR",
+				"type": "String"
+			},
+			{
+				"name": "KNDNR",
+				"type": "String"
+			},
+			{
+				"name": "ARTNR",
+				"type": "String"
+			},
+			{
+				"name": "FKART",
+				"type": "String"
+			},
+			{
+				"name": "FRWAE",
+				"type": "String"
+			},
+			{
+				"name": "KURSF",
+				"type": "String"
+			},
+			{
+				"name": "KURSBK",
+				"type": "String"
+			},
+			{
+				"name": "KURSKZ",
+				"type": "String"
+			},
+			{
+				"name": "REC_WAERS",
+				"type": "String"
+			},
+			{
+				"name": "KAUFN",
+				"type": "String"
+			},
+			{
+				"name": "KDPOS",
+				"type": "String"
+			},
+			{
+				"name": "RKAUFNR",
+				"type": "String"
+			},
+			{
+				"name": "SKOST",
+				"type": "String"
+			},
+			{
+				"name": "PRZNR",
+				"type": "String"
+			},
+			{
+				"name": "BUKRS",
+				"type": "String"
+			},
+			{
+				"name": "KOKRS",
+				"type": "String"
+			},
+			{
+				"name": "WERKS",
+				"type": "String"
+			},
+			{
+				"name": "GSBER",
+				"type": "String"
+			},
+			{
+				"name": "FKBER",
+				"type": "String"
+			},
+			{
+				"name": "SEGMENT",
+				"type": "String"
+			},
+			{
+				"name": "VKORG",
+				"type": "String"
+			},
+			{
+				"name": "VTWEG",
+				"type": "String"
+			},
+			{
+				"name": "SPART",
+				"type": "String"
+			},
+			{
+				"name": "HRKFT",
+				"type": "String"
+			},
+			{
+				"name": "PLIKZ",
+				"type": "String"
+			},
+			{
+				"name": "KSTAR",
+				"type": "String"
+			},
+			{
+				"name": "PSPNR",
+				"type": "String"
+			},
+			{
+				"name": "COPA_KOSTL",
+				"type": "String"
+			},
+			{
+				"name": "KSTRG",
+				"type": "String"
+			},
+			{
+				"name": "RBELN",
+				"type": "String"
+			},
+			{
+				"name": "RPOSN",
+				"type": "String"
+			},
+			{
+				"name": "STO_BELNR",
+				"type": "String"
+			},
+			{
+				"name": "STO_POSNR",
+				"type": "String"
+			},
+			{
+				"name": "PRCTR",
+				"type": "String"
+			},
+			{
+				"name": "PPRCTR",
+				"type": "String"
+			},
+			{
+				"name": "RKESTATU",
+				"type": "String"
+			},
+			{
+				"name": "TIMESTMP",
+				"type": "String"
+			},
+			{
+				"name": "COPA_AWTYP",
+				"type": "String"
+			},
+			{
+				"name": "COPA_AWORG",
+				"type": "String"
+			},
+			{
+				"name": "COPA_BWZPT",
+				"type": "String"
+			},
+			{
+				"name": "COPA_AWSYS",
+				"type": "String"
+			},
+			{
+				"name": "SERVICE_DOC_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "SERVICE_DOC_ID",
+				"type": "String"
+			},
+			{
+				"name": "SERVICE_DOC_ITEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "LOGSYS_SENDER",
+				"type": "String"
+			},
+			{
+				"name": "ERKRS_SENDER",
+				"type": "String"
+			},
+			{
+				"name": "BELNR_SENDER",
+				"type": "String"
+			},
+			{
+				"name": "POSNR_SENDER",
+				"type": "String"
+			},
+			{
+				"name": "VRGAR_SENDER",
+				"type": "String"
+			},
+			{
+				"name": "BUKRS_SENDER",
+				"type": "String"
+			},
+			{
+				"name": "REPROCESSING_STATUS_CODE",
+				"type": "String"
+			},
+			{
+				"name": "SOLUTION_ORDER_ID",
+				"type": "String"
+			},
+			{
+				"name": "SOLUTION_ORDER_ITEM_ID",
+				"type": "String"
+			},
+			{
+				"name": "VTKEY",
+				"type": "String"
+			},
+			{
+				"name": "VTPOS",
+				"type": "String"
+			},
+			{
+				"name": "KDGRP",
+				"type": "String"
+			},
+			{
+				"name": "LAND1",
+				"type": "String"
+			},
+			{
+				"name": "VKBUR",
+				"type": "String"
+			},
+			{
+				"name": "VKGRP",
+				"type": "String"
+			},
+			{
+				"name": "MTART",
+				"type": "String"
+			},
+			{
+				"name": "WWBKL",
+				"type": "String"
+			},
+			{
+				"name": "BZIRK",
+				"type": "String"
+			},
+			{
+				"name": "MVGR1",
+				"type": "String"
+			},
+			{
+				"name": "MVGR2",
+				"type": "String"
+			},
+			{
+				"name": "MVGR3",
+				"type": "String"
+			},
+			{
+				"name": "MVGR4",
+				"type": "String"
+			},
+			{
+				"name": "MVGR5",
+				"type": "String"
+			},
+			{
+				"name": "WW001",
+				"type": "String"
+			},
+			{
+				"name": "WW002",
+				"type": "String"
+			},
+			{
+				"name": "WW003",
+				"type": "String"
+			},
+			{
+				"name": "WW004",
+				"type": "String"
+			},
+			{
+				"name": "WW007",
+				"type": "String"
+			},
+			{
+				"name": "WW010",
+				"type": "String"
+			},
+			{
+				"name": "WW100",
+				"type": "String"
+			},
+			{
+				"name": "ZZCUS",
+				"type": "String"
+			},
+			{
+				"name": "AUART",
+				"type": "String"
+			},
+			{
+				"name": "PSTYV",
+				"type": "String"
+			},
+			{
+				"name": "KUNWE",
+				"type": "String"
+			},
+			{
+				"name": "WWDOC",
+				"type": "String"
+			},
+			{
+				"name": "WW900",
+				"type": "String"
+			},
+			{
+				"name": "WW901",
+				"type": "String"
+			},
+			{
+				"name": "WW902",
+				"type": "String"
+			},
+			{
+				"name": "WW903",
+				"type": "String"
+			},
+			{
+				"name": "WW904",
+				"type": "String"
+			},
+			{
+				"name": "ABSMG_ME",
+				"type": "String"
+			},
+			{
+				"name": "VV001_ME",
+				"type": "String"
+			},
+			{
+				"name": "VVSMG_ME",
+				"type": "String"
+			},
+			{
+				"name": "ABSMG",
+				"type": "String"
+			},
+			{
+				"name": "VV001",
+				"type": "String"
+			},
+			{
+				"name": "VVSMG",
+				"type": "String"
+			},
+			{
+				"name": "VV111",
+				"type": "String"
+			},
+			{
+				"name": "VV112",
+				"type": "String"
+			},
+			{
+				"name": "VV113",
+				"type": "String"
+			},
+			{
+				"name": "VV114",
+				"type": "String"
+			},
+			{
+				"name": "VV115",
+				"type": "String"
+			},
+			{
+				"name": "VV116",
+				"type": "String"
+			},
+			{
+				"name": "VV121",
+				"type": "String"
+			},
+			{
+				"name": "VV201",
+				"type": "String"
+			},
+			{
+				"name": "VV221",
+				"type": "String"
+			},
+			{
+				"name": "VV222",
+				"type": "String"
+			},
+			{
+				"name": "VV223",
+				"type": "String"
+			},
+			{
+				"name": "VV224",
+				"type": "String"
+			},
+			{
+				"name": "VV225",
+				"type": "String"
+			},
+			{
+				"name": "VV229",
+				"type": "String"
+			},
+			{
+				"name": "VV231",
+				"type": "String"
+			},
+			{
+				"name": "VV232",
+				"type": "String"
+			},
+			{
+				"name": "VV233",
+				"type": "String"
+			},
+			{
+				"name": "VV234",
+				"type": "String"
+			},
+			{
+				"name": "VV235",
+				"type": "String"
+			},
+			{
+				"name": "VV236",
+				"type": "String"
+			},
+			{
+				"name": "VV237",
+				"type": "String"
+			},
+			{
+				"name": "VV239",
+				"type": "String"
+			},
+			{
+				"name": "VV241",
+				"type": "String"
+			},
+			{
+				"name": "VV411",
+				"type": "String"
+			},
+			{
+				"name": "VV412",
+				"type": "String"
+			},
+			{
+				"name": "VV421",
+				"type": "String"
+			},
+			{
+				"name": "VV431",
+				"type": "String"
+			},
+			{
+				"name": "VV432",
+				"type": "String"
+			},
+			{
+				"name": "VV441",
+				"type": "String"
+			},
+			{
+				"name": "VV442",
+				"type": "String"
+			},
+			{
+				"name": "VV443",
+				"type": "String"
+			},
+			{
+				"name": "VV444",
+				"type": "String"
+			},
+			{
+				"name": "VV445",
+				"type": "String"
+			},
+			{
+				"name": "VV446",
+				"type": "String"
+			},
+			{
+				"name": "VV447",
+				"type": "String"
+			},
+			{
+				"name": "VV448",
+				"type": "String"
+			},
+			{
+				"name": "VV449",
+				"type": "String"
+			},
+			{
+				"name": "VV44A",
+				"type": "String"
+			},
+			{
+				"name": "VV451",
+				"type": "String"
+			},
+			{
+				"name": "VV452",
+				"type": "String"
+			},
+			{
+				"name": "VV453",
+				"type": "String"
+			},
+			{
+				"name": "VV454",
+				"type": "String"
+			},
+			{
+				"name": "VV455",
+				"type": "String"
+			},
+			{
+				"name": "VV456",
+				"type": "String"
+			},
+			{
+				"name": "VV457",
+				"type": "String"
+			},
+			{
+				"name": "VV461",
+				"type": "String"
+			},
+			{
+				"name": "VV462",
+				"type": "String"
+			},
+			{
+				"name": "VV471",
+				"type": "String"
+			},
+			{
+				"name": "VV472",
+				"type": "String"
+			},
+			{
+				"name": "VV473",
+				"type": "String"
+			},
+			{
+				"name": "VV474",
+				"type": "String"
+			},
+			{
+				"name": "VV481",
+				"type": "String"
+			},
+			{
+				"name": "VV482",
+				"type": "String"
+			},
+			{
+				"name": "VV491",
+				"type": "String"
+			},
+			{
+				"name": "VV611",
+				"type": "String"
+			},
+			{
+				"name": "VV612",
+				"type": "String"
+			},
+			{
+				"name": "VV613",
+				"type": "String"
+			},
+			{
+				"name": "VV614",
+				"type": "String"
+			},
+			{
+				"name": "VV615",
+				"type": "String"
+			},
+			{
+				"name": "VV616",
+				"type": "String"
+			},
+			{
+				"name": "VV621",
+				"type": "String"
+			},
+			{
+				"name": "VV622",
+				"type": "String"
+			},
+			{
+				"name": "VV623",
+				"type": "String"
+			},
+			{
+				"name": "VV624",
+				"type": "String"
+			},
+			{
+				"name": "VV625",
+				"type": "String"
+			},
+			{
+				"name": "VV631",
+				"type": "String"
+			},
+			{
+				"name": "VV641",
+				"type": "String"
+			},
+			{
+				"name": "VV642",
+				"type": "String"
+			},
+			{
+				"name": "VV643",
+				"type": "String"
+			},
+			{
+				"name": "VV644",
+				"type": "String"
+			},
+			{
+				"name": "VV649",
+				"type": "String"
+			},
+			{
+				"name": "VV811",
+				"type": "String"
+			},
+			{
+				"name": "VV831",
+				"type": "String"
+			},
+			{
+				"name": "VV832",
+				"type": "String"
+			},
+			{
+				"name": "VV841",
+				"type": "String"
+			},
+			{
+				"name": "VV842",
+				"type": "String"
+			},
+			{
+				"name": "VV851",
+				"type": "String"
+			},
+			{
+				"name": "VV852",
+				"type": "String"
+			},
+			{
+				"name": "VV911",
+				"type": "String"
+			},
+			{
+				"name": "VVS00",
+				"type": "String"
+			},
+			{
+				"name": "VVS01",
+				"type": "String"
+			},
+			{
+				"name": "VVS05",
+				"type": "String"
+			},
+			{
+				"name": "VVS06",
+				"type": "String"
+			},
+			{
+				"name": "VVS07",
+				"type": "String"
+			},
+			{
+				"name": "VVS08",
+				"type": "String"
+			},
+			{
+				"name": "VVS09",
+				"type": "String"
+			},
+			{
+				"name": "VVS11",
+				"type": "String"
+			},
+			{
+				"name": "VVS13",
+				"type": "String"
+			},
+			{
+				"name": "VVS15",
+				"type": "String"
+			},
+			{
+				"name": "VVS17",
+				"type": "String"
+			},
+			{
+				"name": "VVA00",
+				"type": "String"
+			},
+			{
+				"name": "VVA01",
+				"type": "String"
+			},
+			{
+				"name": "VVA05",
+				"type": "String"
+			},
+			{
+				"name": "VVA06",
+				"type": "String"
+			},
+			{
+				"name": "VVA07",
+				"type": "String"
+			},
+			{
+				"name": "VVA08",
+				"type": "String"
+			},
+			{
+				"name": "VVA09",
+				"type": "String"
+			},
+			{
+				"name": "VVA11",
+				"type": "String"
+			},
+			{
+				"name": "VVA13",
+				"type": "String"
+			},
+			{
+				"name": "VVA15",
+				"type": "String"
+			},
+			{
+				"name": "VVA17",
+				"type": "String"
+			},
+			{
+				"name": "VV209",
+				"type": "String"
+			},
+			{
+				"name": "VV228",
+				"type": "String"
+			},
+			{
+				"name": "VV219",
+				"type": "String"
+			},
+			{
+				"name": "VV459",
+				"type": "String"
+			},
+			{
+				"name": "LASTCHANGEDAT",
+				"type": "String"
+			},
+			{
+				"name": "ODS_LOAD_DTS",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

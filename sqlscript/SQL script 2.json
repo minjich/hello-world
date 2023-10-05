@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "-- CREATE TABLE [dbo].tb_cosmos_cdc\n-- drop table tb_cosmos_cdc2\nCREATE TABLE tb_cosmos_cdc2\n(\n    \n    _rid varchar(8000) not null,\n    _etag varchar(8000),\n    _ts bigint,\n    quantity bigint,\n    id varchar(8000),\n    orderdate varchar(8000),\n    product varchar(8000),\n    customerid bigint,\n    -- customerdetails VARCHAR(max),\n    price float\n)\nWITH\n(\n CLUSTERED COLUMNSTORE INDEX \n)\nGO\n\ntruncate table tb_cosmos_cdc\nselect * from tb_cosmos_cdc\n\n\n--file로 가져오\nCREATE EXTERNAL TABLE tb_cosmos_file\nWITH (\n    LOCATION = 'aggregated_data/',\n    DATA_SOURCE = population_ds,  \n    FILE_FORMAT = census_file_format\n)  \nAS\nSELECT id, quantity, orderdate, product, customerid, price,_rid,_etag\nFROM\n    OPENROWSET(BULK 'https://this4synapse.blob.core.windows.net/cosmos/*.parquet',\n    FORMAT='PARQUET') AS [r]\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "minjisource",
+				"poolName": "minjisource"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

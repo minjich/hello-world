@@ -1,0 +1,20 @@
+{
+	"name": "PoC_Pg_user_log_DSset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PoC_Pg_linked_Service",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "PoC Dataset"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "emp"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

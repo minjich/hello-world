@@ -1,0 +1,20 @@
+{
+	"name": "PoC_Oracle_DSset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PoC_Oracle_Linked_Service",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "PoC Dataset"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "DBADMIN",
+			"table": "EMP"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

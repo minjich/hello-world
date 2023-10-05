@@ -1,0 +1,1101 @@
+{
+	"name": "AzureSqlTable3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PALEDGER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VRGAR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERSI",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PERIO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PAOBJNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PASUBNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BELNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HZDAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "USNAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GJAHR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PERDE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WADAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FADAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BUDAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ALTPERIO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PAPAOBJNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PAPASUBNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KNDNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FKART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FRWAE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KURSF",
+				"type": "decimal",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "KURSBK",
+				"type": "decimal",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "KURSKZ",
+				"type": "decimal",
+				"precision": 9,
+				"scale": 5
+			},
+			{
+				"name": "REC_WAERS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KAUFN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KDPOS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RKAUFNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SKOST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRZNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BUKRS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KOKRS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WERKS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GSBER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FKBER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SEGMENT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VKORG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VTWEG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SPART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HRKFT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PLIKZ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KSTAR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PSPNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COPA_KOSTL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KSTRG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RBELN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RPOSN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STO_BELNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STO_POSNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRCTR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PPRCTR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RKESTATU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TIMESTMP",
+				"type": "decimal",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "COPA_AWTYP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COPA_AWORG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COPA_BWZPT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COPA_AWSYS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SERVICE_DOC_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SERVICE_DOC_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SERVICE_DOC_ITEM_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LOGSYS_SENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ERKRS_SENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BELNR_SENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSNR_SENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VRGAR_SENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BUKRS_SENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REPROCESSING_STATUS_CODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SOLUTION_ORDER_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SOLUTION_ORDER_ITEM_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VTKEY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VTPOS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KDGRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAND1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VKBUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VKGRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MTART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WWBKL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BZIRK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MVGR1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MVGR2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MVGR3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MVGR4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MVGR5",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW001",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW002",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW003",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW004",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW007",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW010",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW100",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZZCUS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AUART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PSTYV",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KUNWE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WWDOC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW900",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW901",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW902",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW903",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WW904",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ABSMG_ME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VV001_ME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VVSMG_ME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ABSMG",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 3
+			},
+			{
+				"name": "VV001",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 3
+			},
+			{
+				"name": "VVSMG",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 3
+			},
+			{
+				"name": "VV111",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV112",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV113",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV114",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV115",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV116",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV121",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV201",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV221",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV222",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV223",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV224",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV225",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV229",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV231",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV232",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV233",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV234",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV235",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV236",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV237",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV239",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV241",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV411",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV412",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV421",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV431",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV432",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV441",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV442",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV443",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV444",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV445",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV446",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV447",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV448",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV449",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV44A",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV451",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV452",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV453",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV454",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV455",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV456",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV457",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV461",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV462",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV471",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV472",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV473",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV474",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV481",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV482",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV491",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV611",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV612",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV613",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV614",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV615",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV616",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV621",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV622",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV623",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV624",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV625",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV631",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV641",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV642",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV643",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV644",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV649",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV811",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV831",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV832",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV841",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV842",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV851",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV852",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV911",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS00",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS01",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS05",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS06",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS07",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS08",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS09",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS11",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS13",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS15",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVS17",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA00",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA01",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA05",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA06",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA07",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA08",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA09",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA11",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA13",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA15",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VVA17",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV209",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV228",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV219",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "VV459",
+				"type": "decimal",
+				"precision": 23,
+				"scale": 2
+			},
+			{
+				"name": "LASTCHANGEDAT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "ODS_LOAD_DTS",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CE1KR01_D"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

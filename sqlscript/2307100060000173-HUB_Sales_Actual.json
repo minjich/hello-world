@@ -1,0 +1,17 @@
+{
+	"name": "2307100060000173-HUB_Sales_Actual",
+	"properties": {
+		"content": {
+			"query": "IF OBJECT_ID(N'[hbiedw].[HUB_Sales]', N'U') IS NOT NULL  \n   DROP TABLE [hbiedw].[HUB_Sales];  \nGO\n\nCREATE TABLE [hbiedw].[HUB_Sales] with ( clustered index(HK_Sales)  , distribution = hash(HK_Sales))  AS \n select convert(nvarchar(32), HASHBYTES('MD5', CONCAT( 'Actual', '^' ,TRIM(PALEDGER), '^',TRIM(VRGAR), '^',TRIM(VERSI), '^',TRIM(PERIO), '^',TRIM(PAOBJNR), '^',TRIM(PASUBNR), '^',TRIM(BELNR), '^',TRIM(POSNR))),2) AS HK_Sales\n, CAST('Actual' AS VARCHAR(10))AS [Version]\n, [PALEDGER]  AS   [Currency_Type]\n, [VRGAR]  AS   [Record_Type]\n, [VERSI]  AS   [Plan_version_CO_PA]\n, [PERIO]  AS   [Period_Year]\n, [PAOBJNR]  AS   [Profitability_Segment_Number_CO_PA]\n, [PASUBNR]  AS   [Profitability_Segment_Changes_CO_PA]\n, [BELNR]  AS   [Profitability_Analysis_Chit_Number]\n, [POSNR]  AS   [CO_PA_Item_Number]\n, CONCAT( 'Actual', '^' ,TRIM(PALEDGER), '^',TRIM(VRGAR), '^',TRIM(VERSI), '^',TRIM(PERIO), '^',TRIM(PAOBJNR), '^',TRIM(PASUBNR), '^',TRIM(BELNR), '^',TRIM(POSNR))AS BK_Sales\n, DATEADD(HOUR, 9, GETDATE()) AS EDW_LOAD_DTS , 'CE1KR01' AS RECORD_SRC\n FROM [hbiods].[CE1KR01_D]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

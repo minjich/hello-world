@@ -1,0 +1,37 @@
+{
+	"name": "MJTestJob_oversize",
+	"properties": {
+		"targetBigDataPool": {
+			"referenceName": "mjspark",
+			"type": "BigDataPoolReference"
+		},
+		"requiredSparkVersion": "3.3",
+		"language": "python",
+		"scanFolder": false,
+		"jobProperties": {
+			"name": "MJTestJob_oversize",
+			"file": "abfss://root@this4synapse.dfs.core.windows.net/sparkJob/wordcount.py",
+			"conf": {
+				"spark.dynamicAllocation.enabled": "true",
+				"spark.dynamicAllocation.minExecutors": "1",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "43ac504b-3c45-4490-a2b1-6f7b20f3909b",
+				"spark.synapse.context.sjdname": "MJTestJob_oversize"
+			},
+			"args": [
+				"abfss://root@this4synapse.dfs.core.windows.net/sparkJob/Cluster.txt",
+				"abfss://root@this4synapse.dfs.core.windows.net/sparkJob/result"
+			],
+			"jars": [],
+			"pyFiles": [
+				""
+			],
+			"files": [],
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 1
+		}
+	}
+}

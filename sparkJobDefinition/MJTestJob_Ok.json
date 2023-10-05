@@ -1,0 +1,37 @@
+{
+	"name": "MJTestJob_Ok",
+	"properties": {
+		"targetBigDataPool": {
+			"referenceName": "mjspark",
+			"type": "BigDataPoolReference"
+		},
+		"requiredSparkVersion": "3.3",
+		"language": "python",
+		"scanFolder": false,
+		"jobProperties": {
+			"name": "MJTestJob_Ok",
+			"file": "abfss://root@this4synapse.dfs.core.windows.net/sparkJob/wordcount.py",
+			"conf": {
+				"spark.dynamicAllocation.enabled": "true",
+				"spark.dynamicAllocation.minExecutors": "1",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "4ce52c71-730b-46dd-a45e-323f2743b458",
+				"spark.synapse.context.sjdname": "MJTestJob_Ok"
+			},
+			"args": [
+				"abfss://root@this4synapse.dfs.core.windows.net/sparkJob/shakespeare.txt",
+				"abfss://root@this4synapse.dfs.core.windows.net/sparkJob/result"
+			],
+			"jars": [],
+			"pyFiles": [
+				""
+			],
+			"files": [],
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 1
+		}
+	}
+}

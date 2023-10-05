@@ -1,0 +1,241 @@
+{
+	"name": "Ora to Pg general_parallel_copy2",
+	"properties": {
+		"activities": [
+			{
+				"name": "TCM_USER_LOG",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "OracleSource",
+						"oracleReaderQuery": "select * \n from COM.TCM_USER_LOG\nWHERE ?AdfRangePartitionColumnName <= TO_DATE(?AdfRangePartitionUpbound,'YYYYMMDD')\n   AND ?AdfRangePartitionColumnName >= TO_DATE(?AdfRangePartitionLowbound,'YYYYMMDD')\n ",
+						"partitionOption": "DynamicRange",
+						"partitionSettings": {
+							"partitionColumnName": "INS_DT",
+							"partitionUpperBound": {
+								"value": "@{concat(substring(formatDateTime(addDays(addHours(utcNow(),9), 1),'yyyyMMdd'),1,4), '-',\nsubstring(formatDateTime(addDays(addHours(utcNow(),9), 1),'yyyyMMdd'),5,2), '-',\nsubstring(formatDateTime(addDays(addHours(utcNow(),9), 1),'yyyyMMdd'),7,2))}",
+								"type": "Expression"
+							},
+							"partitionLowerBound": {
+								"value": "toDate('2018-05-03')",
+								"type": "Expression"
+							}
+						},
+						"convertDecimalToInteger": false,
+						"queryTimeout": "04:00:00"
+					},
+					"sink": {
+						"type": "AzurePostgreSQLSink",
+						"writeBatchSize": 1000000,
+						"writeBatchTimeout": "00:30:00",
+						"writeMethod": "BulkInsert"
+					},
+					"enableStaging": false,
+					"parallelCopies": 20,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "NO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "no",
+									"type": "Int32",
+									"physicalType": "integer"
+								}
+							},
+							{
+								"source": {
+									"name": "SYSTEM_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "system_id",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "SESSION_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "session_id",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "REQUEST_URL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "request_url",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "REMOTE_ADDR",
+									"type": "String"
+								},
+								"sink": {
+									"name": "remote_addr",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "HOSTNAME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "hostname",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "USERNAME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "username",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "START_TIME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "start_time",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "SVC_TIME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "svc_time",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "END_TIME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "end_time",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "MENU_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "menu_id",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "PROGRM_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "progrm_id",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "INS_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ins_id",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "INS_DT",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "ins_dt",
+									"type": "DateTime",
+									"physicalType": "timestamp without time zone"
+								}
+							},
+							{
+								"source": {
+									"name": "INS_IP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ins_ip",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "PoC_Oracle_DSset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "PoC_Pg_user_log_DSset",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "PoC Ora to Pg"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-04-05T05:02:21Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

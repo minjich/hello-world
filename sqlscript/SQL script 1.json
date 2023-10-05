@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "IF (NOT EXISTS(SELECT * FROM sys.credentials WHERE name = 'cosmosm3j'))\n    THROW 50000, 'As a prerequisite, create a credential with Azure Cosmos DB key in SECRET option:\n    CREATE CREDENTIAL [cosmosmj]\n    WITH IDENTITY = ''SHARED ACCESS SIGNATURE'', SECRET = ''xIQMRapoxmiAJVeMJpJwIJOixSU0dWwZre4z25vwdaP2jTxs0WhZFzkatABXIL9rkPk459TtLpt3ACDbJJnBgw==''', 0\nGO\n \nCREATE CREDENTIAL [cosmosmj] WITH IDENTITY = 'SHARED ACCESS SIGNATURE', SECRET = 'keyvalue'\n \ncreate database dbmj\n \n-- SELECT TOP 100 *\n-- FROM OPENROWSET(​PROVIDER = 'CosmosDB',\n--                 CONNECTION = 'Account=cosmosmj;Database=ToDoList',\n--                 OBJECT = 'Items',\n--                 SERVER_CREDENTIAL = 'cosmosmj'\n-- ) AS [Items]\n\nSELECT TOP 100 *\nFROM OPENROWSET(​PROVIDER = 'CosmosDB',\n                CONNECTION = 'Account=cosmosmj;Database=ToDolist',\n                OBJECT = 'abc',\n                SERVER_CREDENTIAL = 'cosmosmj'\n) AS [Items]\n \nCREATE MASTER KEY ENCRYPTION BY PASSWORD = 'P@ssw0rd123!' ;\n \nselect * from sys.external_data_sources\n \nselect * from sys.credentials\n \nselect * from sys.external_file_formats\n \nCREATE DATABASE SCOPED CREDENTIAL msi_cred\nWITH IDENTITY = 'Managed Service Identity' ;\n \nCREATE EXTERNAL DATA SOURCE [SynapseSQLwriteable2] WITH (\n    LOCATION = 'abfss://cosmos@this4synapse.dfs.core.windows.net/'\n);\nGO\nCREATE EXTERNAL FILE FORMAT ParquetFileFormat\n    WITH (FORMAT_TYPE = PARQUET);\nGO\n \n drop EXTERNAL table TB_EXTNL_COSMOS;\n--  CREATE EXTERNAL TABLE TB_EXTNL_COSMOS\n-- with (\n--     DATA_SOURCE  = SynapseSQLwriteable,\n--     LOCATION= '/cosmos',\n--     FILE_FORMAT=ParquetFileFormat\n-- )as SELECT * from \n\nCREATE EXTERNAL TABLE TB_EXTNL_COSMOS_filie\nwith (\n    DATA_SOURCE  = SynapseSQLwriteable2,\n    LOCATION= '',\n    FILE_FORMAT=ParquetFileFormat\n)as SELECT TOP 100 *\nFROM OPENROWSET(​PROVIDER = 'CosmosDB',\n                CONNECTION = 'Account=cosmosmj;Database=ToDolist',\n                OBJECT = 'abc',\n                SERVER_CREDENTIAL = 'cosmosmj'\n) AS [Items]\n \nselect  * from TB_EXTNL_COSMOS\n \nselect * from sys.staistics\n\n\nselect * from INFORMATION_SCHEMA.COLUMNS where table_name='TB_EXTNL_COSMOS'\n\n-- truncate table tb_cosmos_cdc\nselect * from tb_cosmos_cdc\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "minjisource",
+				"poolName": "minjisource"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

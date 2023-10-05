@@ -1,0 +1,19 @@
+{
+	"name": "mj spark",
+	"properties": {
+		"description": "enabled dynamic allocation",
+		"configs": {
+			"spark.dynamicAllocation.enabled": "true",
+			"spark.dynamicAllocation.maxExecutors": "10",
+			"spark.dynamicAllocation.minExecutors": "5"
+		},
+		"created": "2023-04-17T04:16:43.719Z",
+		"createdBy": "minjich@microsoft.com",
+		"annotations": [],
+		"configMergeRule": {
+			"artifact.currentOperation.spark.dynamicAllocation.enabled": "replace",
+			"artifact.currentOperation.spark.dynamicAllocation.maxExecutors": "replace",
+			"artifact.currentOperation.spark.dynamicAllocation.minExecutors": "replace"
+		}
+	}
+}

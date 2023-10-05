@@ -1,0 +1,162 @@
+{
+	"name": "Ora to Pg general_parallel_copy2-mj_bak",
+	"properties": {
+		"description": "20230412",
+		"activities": [
+			{
+				"name": "TCM_USER_LOG",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "OracleSource",
+						"oracleReaderQuery": {
+							"value": "select *  from EMP \nWHERE to_char(?AdfRangePartitionColumnName,'yyyymmddhh24miss') <= ?AdfRangePartitionUpbound\n   AND to_char(?AdfRangePartitionColumnName,'yyyymmddhh24miss') >= ?AdfRangePartitionLowbound",
+							"type": "Expression"
+						},
+						"partitionOption": "DynamicRange",
+						"partitionSettings": {
+							"partitionColumnName": "HIREDATE",
+							"partitionUpperBound": "20230406999999",
+							"partitionLowerBound": "19070115000000"
+						},
+						"convertDecimalToInteger": false,
+						"queryTimeout": "04:00:00"
+					},
+					"sink": {
+						"type": "AzurePostgreSQLSink",
+						"writeBatchSize": 1000000,
+						"writeBatchTimeout": "00:30:00",
+						"writeMethod": "BulkInsert"
+					},
+					"enableStaging": false,
+					"parallelCopies": 20,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "EMPNO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "empno",
+									"type": "Int32",
+									"physicalType": "integer"
+								}
+							},
+							{
+								"source": {
+									"name": "ENAME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ename",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "JOB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "job",
+									"type": "String",
+									"physicalType": "character varying"
+								}
+							},
+							{
+								"source": {
+									"name": "MGR",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "mgr",
+									"type": "Int32",
+									"physicalType": "integer"
+								}
+							},
+							{
+								"source": {
+									"name": "HIREDATE",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "hiredate",
+									"type": "DateTime",
+									"physicalType": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "SAL",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "sal",
+									"type": "Int32",
+									"physicalType": "integer"
+								}
+							},
+							{
+								"source": {
+									"name": "COMM",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "comm",
+									"type": "Int32",
+									"physicalType": "integer"
+								}
+							},
+							{
+								"source": {
+									"name": "DEPTNO",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "deptno",
+									"type": "Int32",
+									"physicalType": "integer"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "PoC_Oracle_DSset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "PoC_Pg_user_log_DSset",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "PoC Ora to Pg"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-04-12T05:07:35Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

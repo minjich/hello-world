@@ -1,0 +1,21 @@
+{
+	"name": "AzureDataExplorerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataExplorer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataExplorerTable",
+		"schema": [
+			{
+				"name": "Event",
+				"type": "dynamic"
+			}
+		],
+		"typeProperties": {
+			"table": "RawEvents2"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

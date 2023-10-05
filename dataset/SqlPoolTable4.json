@@ -1,0 +1,66 @@
+{
+	"name": "SqlPoolTable4",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "HK_Sales",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Version",
+				"type": "varchar"
+			},
+			{
+				"name": "Currency_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Record_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Plan_version_CO_PA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Period_Year",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Profitability_Segment_Number_CO_PA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Profitability_Segment_Changes_CO_PA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Profitability_Analysis_Chit_Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CO_PA_Item_Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BK_Sales",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECORD_SRC",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "HUB_Sales"
+		},
+		"sqlPool": {
+			"referenceName": "minjisource",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
